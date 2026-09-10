@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RootVector | Cybersecurity</title>
+    <meta name="description" content="RootVector — cybersecurity portfolio, projects, labs, and learning journey.">
+    <title>RootVector | Cybersecurity Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -16,37 +17,200 @@
 
         <nav>
             <ul>
-                <li><a href="#training">TRAINING</a></li>
-                <li><a href="#community">COMMUNITY</a></li>
-                <li><a href="#myths">MYTHS</a></li>
-                <li><a href="#creator">CREATOR</a></li>
+                <li><a href="#skills">SKILLS</a></li>
+                <li><a href="#projects">PROJECTS</a></li>
+                <li><a href="#labs">LABS</a></li>
+                <li><a href="#about">ABOUT</a></li>
                 <li>
-                    <a href="#start" class="btn">START HACKING</a>
+                    <a href="#contact" class="btn">CONTACT</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="start" class="hero">
-            <h2>Learn Ethical Hacking the Right Way</h2>
+
+        <!-- HERO -->
+        <section id="start" class="hero home-grid">
+            <p class="eyebrow">CYBERSECURITY • OFFENSIVE SECURITY • LINUX</p>
+
+            <h2>Building skills.<br>Breaking systems.<br>Learning the right way.</h2>
+
             <p>
-                Master cybersecurity fundamentals, understand vulnerabilities,
-                and practice legally on real-world labs.
+                I'm <strong>RootVector</strong>, a CSE student focused on cybersecurity,
+                ethical hacking, penetration testing, Linux, networking and low-level
+                systems. This site documents what I build, break, learn and improve.
             </p>
-            <button onclick="startJourney()">Get Started</button>
+
+            <div class="hero-actions">
+                <a href="#projects" class="hero-button">View My Work</a>
+                <a href="https://github.com/rootvector" target="_blank" rel="noopener" class="text-link">
+                    GitHub →
+                </a>
+            </div>
         </section>
+
+        <!-- SKILLS -->
+        <section id="skills" class="section">
+            <p class="eyebrow">01 / SKILLS</p>
+            <h3>What I'm working with</h3>
+
+            <div class="grid">
+                <article class="card">
+                    <span class="card-number">01</span>
+                    <h4>Cybersecurity</h4>
+                    <p>Web security, vulnerability research, penetration testing, OSINT and offensive security labs.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">02</span>
+                    <h4>Programming</h4>
+                    <p>Pure C, C++, Python, Bash and web technologies used to understand and build security tooling.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">03</span>
+                    <h4>Systems & Networking</h4>
+                    <p>Linux, TCP/IP, sockets, processes, memory, networking fundamentals and low-level programming.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects" class="section">
+            <p class="eyebrow">02 / PROJECTS</p>
+            <h3>Things I've built</h3>
+
+            <div class="project-list">
+
+                <article class="project">
+                    <div>
+                        <span class="project-tag">C • NETWORK SECURITY</span>
+                        <h4>RootScan</h4>
+                        <p>
+                            A TCP port-scanning project built while learning sockets,
+                            networking and security tooling in C.
+                        </p>
+                    </div>
+                    <a href="https://github.com/rootvector/6weeks-of-code/blob/main/networking/Port_Scannerv3.c"
+                       target="_blank" rel="noopener">GitHub →</a>
+                </article>
+
+                <article class="project">
+                    <div>
+                        <span class="project-tag">LEARNING REPOSITORY</span>
+                        <h4>C Projects</h4>
+                        <p>
+                            A structured collection of pure C practice, notes,
+                            experiments and low-level programming concepts.
+                        </p>
+                    </div>
+                    <a href="https://github.com/rootvector/6weeks-of-code"
+                       target="_blank" rel="noopener">GitHub →</a>
+                </article>
+
+                <article class="project">
+                    <div>
+                        <span class="project-tag">PORTFOLIO</span>
+                        <h4>RootVector Security</h4>
+                        <p>
+                            My personal cybersecurity portfolio and public record
+                            of the journey toward offensive security.
+                        </p>
+                    </div>
+                    <a href="https://rootvector.github.io/rootvector.sec/"
+                       target="_blank" rel="noopener">Visit →</a>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- LABS -->
+        <section id="labs" class="section">
+            <p class="eyebrow">03 / LABS</p>
+            <h3>Learning by doing</h3>
+
+            <div class="grid">
+                <article class="card">
+                    <span class="card-number">THM</span>
+                    <h4>TryHackMe</h4>
+                    <p>Hands-on rooms covering web security, Linux, networking, OSINT and offensive security.</p>
+                    <a href="https://tryhackme.com/p/rootvector" target="_blank" rel="noopener" class="card-link">
+                        Profile →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">PS</span>
+                    <h4>PortSwigger</h4>
+                    <p>Web security labs focused on SQL injection, authentication, access control and other vulnerabilities.</p>
+                    <a href="https://portswigger.net/web-security" target="_blank" rel="noopener" class="card-link">
+                        Web Security Academy →
+                    </a>
+                </article>
+
+                <article class="card">
+                    <span class="card-number">LAB</span>
+                    <h4>Security Labs</h4>
+                    <p>Local vulnerable environments using Kali Linux, DVWA, WebGoat, bWAPP and vulnerable VMs.</p>
+                    <span class="status">ACTIVE LEARNING</span>
+                </article>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="about" class="section about">
+            <p class="eyebrow">04 / ABOUT</p>
+            <h3>Who is RootVector?</h3>
+
+            <p class="about-text">
+                I'm a CSE student building a strong foundation in computer science
+                before going deeper into red teaming and penetration testing.
+                I document my labs, projects and experiments so the progress is
+                visible — not just claimed.
+            </p>
+
+            <div class="facts">
+                <div>
+                    <span>FOCUS</span>
+                    <strong>Offensive Security</strong>
+                </div>
+                <div>
+                    <span>OS</span>
+                    <strong>Linux</strong>
+                </div>
+                <div>
+                    <span>LANGUAGE</span>
+                    <strong>C / Python</strong>
+                </div>
+                <div>
+                    <span>GOAL</span>
+                    <strong>Red Teaming</strong>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact" class="section contact">
+            <p class="eyebrow">05 / CONTACT</p>
+            <h3>Let's connect.</h3>
+            <p>
+                Interested in cybersecurity, collaboration or checking out the work?
+                Find me here.
+            </p>
+
+            <div class="contact-links">
+                <a href="https://github.com/rootvector" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://tryhackme.com/p/rootvector" target="_blank" rel="noopener">TryHackMe</a>
+                <a href="mailto:rohankakde16@gmail.com">Email</a>
+            </div>
+        </section>
+
     </main>
 
     <footer>
-        <p>© 2026 RootVector. All Rights Reserved.</p>
+        <p>© 2026 RootVector. Built to document the journey.</p>
     </footer>
-
-    <script>
-        function startJourney() {
-            alert("Welcome to your hacking journey 🔥");
-        }
-    </script>
 
 </body>
 </html>
