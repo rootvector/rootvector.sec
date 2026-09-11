@@ -49,6 +49,16 @@ header {
     font-weight: 800;
     color: var(--primary);
     letter-spacing: 2px;
+    /* 1. Tell the browser to prepare the GPU for transforms */
+    will-change: transform;
+
+    /* 2. Prevent the text from looking blurry or "snapping" during animation */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.logo h1:hover {
+    animation: floatAnimation 1.5s ease-in-out infinite;
 }
 
 /* NAVIGATION */
@@ -61,15 +71,23 @@ nav ul {
 
 /* NAV LINKS */
 nav ul li a {
+    display: inline-block;
     text-decoration: none;
     color: var(--text);
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: 0.3s ease;
+    /* 1. Tell the browser to prepare the GPU for transforms */
+    will-change: transform;
+
+    /* 2. Prevent the text from looking blurry or "snapping" during animation */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 nav ul li a:hover {
     color: var(--primary);
+    animation: floatAnimation 1.5s ease-in-out infinite;
 }
 
 /* BUTTON STYLE */
@@ -108,7 +126,7 @@ nav ul li a:hover {
 }
 
 .home-grid::before {
-   background-image:
+    background-image:
         linear-gradient(rgba(255, 38, 37, 0.04) 1px, transparent 1px),
         linear-gradient(90deg, rgba(255, 38, 37, 0.04) 1px, transparent 1px);
 
@@ -117,13 +135,25 @@ nav ul li a:hover {
 
 .home-grid::after {
     background-image:
-            linear-gradient(rgba(255, 38, 37, 0.04) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 38, 37, 0.04) 1px, transparent 1px);
+        linear-gradient(rgba(255, 38, 37, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 38, 37, 0.04) 1px, transparent 1px);
 
     background-size: 50px 50px;
 
     filter: blur(4px);
     opacity: 0.5;
+}
+
+.hero .eyebrow {
+    color: var(--primary);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typingEffect 3.5s steps(30, end) infinite,
+        blinkCursor 0.75s step-end infinite;
 }
 
 .eyebrow {
@@ -147,7 +177,13 @@ nav ul li a:hover {
 }
 
 .hero p strong {
-    color: var(--text);
+    color: var(--primary);
+    display: inline-block;
+}
+
+.hero p strong:hover {
+    animation: floatAnimation 1.5s ease-in-out infinite;
+
 }
 
 .hero-actions {
@@ -165,6 +201,7 @@ nav ul li a:hover {
     font-size: 0.9rem;
     border-radius: 4px;
     transition: 0.3s ease;
+    animation: floatAnimation 2s ease-in-out infinite;
 }
 
 .hero-button:hover {
@@ -181,6 +218,32 @@ nav ul li a:hover {
 .text-link:hover {
     color: var(--primary);
 }
+
+.terminal-container {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    font-family: monospace;
+    padding: 15px;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.terminal-text {
+    color: var(--primary);
+    font-size: 18px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid var(--primary);
+    /* The cursor */
+    display: inline-block;
+
+    /* Typing and blinking cursor animation loops */
+    animation:
+        typingEffect 3.5s steps(30, end) infinite,
+        blinkCursor 0.75s step-end infinite;
+}
+
+
 
 /* ================= GENERAL SECTIONS ================= */
 
@@ -207,11 +270,18 @@ nav ul li a:hover {
     padding: 25px;
     min-height: 220px;
     transition: 0.3s ease;
+    /* 1. Tell the browser to prepare the GPU for transforms */
+    will-change: transform;
+
+    /* 2. Prevent the text from looking blurry or "snapping" during animation */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 .card:hover {
     border-color: var(--primary);
-    transform: translateY(-3px);
+    /* transform: translateY(-3px); */
+    animation: floatAnimation 1.5s ease-in-out infinite;
 }
 
 .card-number {
@@ -288,14 +358,14 @@ nav ul li a:hover {
     font-size: 0.9rem;
 }
 
-.project > a {
+.project>a {
     color: var(--text);
     text-decoration: none;
     white-space: nowrap;
     font-size: 0.85rem;
 }
 
-.project > a:hover {
+.project>a:hover {
     color: var(--primary);
 }
 
@@ -338,7 +408,7 @@ nav ul li a:hover {
     padding-bottom: 100px;
 }
 
-.contact > p:not(.eyebrow) {
+.contact>p:not(.eyebrow) {
     color: var(--gray);
     line-height: 1.6;
 }
@@ -353,23 +423,32 @@ nav ul li a:hover {
     color: var(--text);
     text-decoration: none;
     font-size: 0.9rem;
+    /* 1. Tell the browser to prepare the GPU for transforms */
+    will-change: transform;
+
+    /* 2. Prevent the text from looking blurry or "snapping" during animation */
+    backface-visibility: hidden;
+    -webkit-font-smoothing: antialiased;
 }
 
 .contact-links a:hover {
     color: var(--primary);
-    animation: floatAnimation 1s ease-in-out infinite;
+    animation: floatAnimation 1.5s ease-in-out infinite;
 }
 
+
 @keyframes floatAnimation {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px); /* Highest point */
-  }
-  100% {
-    transform: translateY(0px);
-  }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -5px, 0);
+    }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
 }
 
 /* ================= FOOTER ================= */
@@ -456,5 +535,32 @@ footer {
 
     .contact-links {
         flex-wrap: wrap;
+    }
+}
+
+/* Typing logic */
+@keyframes typingEffect {
+
+    0%,
+    100% {
+        width: 0
+    }
+
+    50%,
+    80% {
+        width: 100%
+    }
+}
+
+/* Cursor blinking logic */
+@keyframes blinkCursor {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: var(--gray);
     }
 }
