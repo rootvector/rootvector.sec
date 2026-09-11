@@ -357,7 +357,7 @@ nav ul li a:hover {
 
 .contact-links a:hover {
     color: var(--primary);
-    animation: floatAnimation 2s ease-in-out infinite;
+    animation: floatAnimation 1s ease-in-out infinite;
 }
 
 @keyframes floatAnimation {
@@ -365,7 +365,7 @@ nav ul li a:hover {
     transform: translateY(0px);
   }
   50% {
-    transform: translateY(-3px); /* Highest point */
+    transform: translateY(-5px); /* Highest point */
   }
   100% {
     transform: translateY(0px);
