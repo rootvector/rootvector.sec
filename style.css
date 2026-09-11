@@ -357,6 +357,19 @@ nav ul li a:hover {
 
 .contact-links a:hover {
     color: var(--primary);
+    animation: floatAnimation 2s ease-in-out infinite;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px); /* Highest point */
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 /* ================= FOOTER ================= */
